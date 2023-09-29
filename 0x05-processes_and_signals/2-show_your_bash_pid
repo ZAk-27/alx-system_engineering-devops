@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# displaying lines contating the bash word script
+ps aux | grep "bash"
