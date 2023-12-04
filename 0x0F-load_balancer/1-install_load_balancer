@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#Dsetup haproxy
+sudo apt update
+sudo apt install haproxy -y
+sudo sh -c 'echo "\nlisten myserver\n\tbind *:80\n\tbalance roundrobin\n\tserver server1 100.25.30.219 check\n\tserver server2 54.165.46.20 check\n" >> /etc/haproxy/haproxy.cfg'
+sudo service haproxy start
